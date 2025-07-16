@@ -1,69 +1,57 @@
-# React + TypeScript + Vite
+# 🧠 NeuroGest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**NeuroGest** é uma plataforma clínica no modelo **SaaS (Software as a Service)**, desenvolvida para **modernizar e otimizar a gestão de clínicas e centros médicos**.
 
-Currently, two official plugins are available:
+Seu principal objetivo é **facilitar o controle de medicamentos, médicos, pacientes e produtos**, oferecendo uma gestão completa e eficiente do fluxo clínico e financeiro.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O grande diferencial do NeuroGest está na **eficiência operacional**, fornecendo ferramentas que vão além do simples registro de dados — como relatórios detalhados, controle de histórico clínico, gastos e lucros da instituição em períodos definidos.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Funcionalidades
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 👨‍⚕️ Gerenciamento de médicos e especialidades
+- 🧾 Controle de medicamentos e estoque
+- 👩‍⚕️ Cadastro e histórico completo de pacientes
+- 📈 Relatórios de lucros, despesas e desempenho
+- 🧠 Histórico clínico integrado ao paciente
+- 📊 Dashboard com indicadores em tempo real
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tecnologias Utilizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Front-end:
+- **React.js**
+- **Tailwind CSS**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Back-end:
+- **Node.js**
+- **MongoDB**
+- **Prisma ORM**
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🔗 Links Úteis
+
+- 📁 Repositório do projeto: [https://github.com/](https://github.com/JoaoLaurindoTchiwilaJT/NeuroGest)
+
+---
+
+## 🚀 Status do Projeto
+
+Em desenvolvimento ativo — novas funcionalidades estão sendo implementadas e melhorias contínuas estão sendo feitas para garantir a escalabilidade e usabilidade da plataforma.
+
+---
+
+## 📬 Contato
+
+Para dúvidas, sugestões ou contribuições, entre em contato:
+
+**João Tchiwila**  
+📧 joaolaurindotchiwilajt@gmail.com  
+🌍 [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-tchiwila-38a85a235/)
+
+---
+
+> **Nota:** Este projeto é parte de um plano para escalar o NeuroGest como um serviço robusto e confiável para clínicas em crescimento.
