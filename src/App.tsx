@@ -1,9 +1,9 @@
-import Menu from "./components/Menu";
+import GeneralStatus from "./pages/GeneralStatus";
 
 function App() {
   return (
     <div>
-      <Menu />
+      <GeneralStatus />
     </div>
   );
 }
