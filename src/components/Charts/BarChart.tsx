@@ -1,7 +1,7 @@
 import ApexChart from "react-apexcharts";
 
 const options = {
-  Chart: {
+  chart: {
     id: "grafico-Bar",
     toolbar: { show: false },
   },
@@ -16,12 +16,28 @@ const options = {
     bar: {
       horizontal: false,
       columnWidth: "50%", // controla o espaçamento entre os dados de cada ano
-      endingShape: "rounded",
     },
   },
   legend: {
     show: false,
   },
+  tooltip: {
+    theme: "light",
+    enabled: true,
+  },
+  responsive: [
+    {
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 200,
+        },
+        legend: {
+          position: "bottom",
+        },
+      },
+    },
+  ],
 };
 
 const series = [
@@ -45,7 +61,7 @@ const series = [
 
 export default function BarChar() {
   return (
-    <div className="bg-white rounded-md shadow-2xl">
+    <div className="h-[400px] bg-white rounded-md shadow-2xl">
       <div className="w-full p-4">
         <p className="text-slate-400">Status geral de medicamento</p>
       </div>
@@ -56,11 +72,11 @@ export default function BarChar() {
           series={series}
           type="bar"
           width={500}
-          height={300}
+          height={200}
         />
       </div>
       <div className="w-full bg-slate-200 h-0.5"></div>
-      <div className="flex p-3 mb-2  justify-center space-x-8 mt-2">
+      <div className="flex p-3  justify-center space-x-8 mt-2">
         <div className="flex items-center space-x-2">
           <div className="rounded-full w-4 h-4 bg-[#4990FF]"></div>
           <span>Stock</span>

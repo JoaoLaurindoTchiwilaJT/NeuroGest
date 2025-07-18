@@ -36,6 +36,19 @@ const options = {
     theme: "light",
     enabled: true,
   },
+  responsive: [
+    {
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 200,
+        },
+        legend: {
+          position: "bottom",
+        },
+      },
+    },
+  ],
 };
 
 const series = [
@@ -51,7 +64,7 @@ const series = [
 
 export default function GraficLinear() {
   return (
-    <div className="rounded-md gap-1  bg-white shadow-xl border border-0">
+    <div className="h-[350] rounded-md  bg-white shadow-xl border border-0">
       <div className="p-4">
         <p className="text-slate-500">Total de Entradas e Saidas</p>
       </div>
@@ -61,7 +74,7 @@ export default function GraficLinear() {
           options={options}
           series={series}
           type="line"
-          height={300}
+          height={200}
           width={500}
         />
       </div>
