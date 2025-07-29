@@ -1,51 +1,47 @@
 import {
-  LayoutDashboardIcon,
-  UserRoundPlus,
+  LayoutDashboard,
   UserCheck,
+  HelpCircle,
+  LogOut,
   Pill,
-  LogIn,
-  BadgeQuestionMark,
 } from "lucide-react";
-import logo from "../assets/icons/png/neurogest.png";
-import ButtonActive from "./ButtonActive";
-import Button from "./Button";
 
-function NavBar() {
+export default function NavBar() {
   return (
-    <div className="h-screen w-80 bg-green-400 grid shadow-neutral-700  shadow-2xl">
-      <div className="items-center justify-center flex">
-        <img src={logo} className="w-44.5 h-44.5" alt="" />
+    <div className="w-[390px] h-screen flex flex-col gap-30 bg-green-400 text-white shadow-2xl shadow-black">
+      <div className="flex h-46 items-center justify-center">
+        <img className="w-40" src="./neurogest.png" alt="Logo" />
       </div>
-      <div className="space-y-4 flex-col ">
-        <ButtonActive>
-          <LayoutDashboardIcon />
-          <div className="w-44 mr-4  items-end flex  ">Status</div>
-        </ButtonActive>
-        <Button>
+
+      <ul className="flex flex-col gap-6">
+        <li className="flex gap-4 p-3 items-center text-green-400 bg-white ">
+          <LayoutDashboard />
+          <p className="text-xl font-semibold">Status Geral</p>
+        </li>
+        <li className="flex gap-4 p-3 items-center ">
           <UserCheck />
-          <div className="w-44 mr-4  items-end flex  ">Cadastrar Paciente</div>
-        </Button>
-        <Button>
+          <p className="text-xl font-semibold">Cadastrar Paciente</p>
+        </li>
+        <li className="flex gap-4 p-3 items-center">
           <Pill />
-          <div className=" w-60   items-end flex  ">Gestão de Medicamentos</div>
-        </Button>
-        <Button>
-          <UserRoundPlus />
-          <div className="w-44 mr-4  items-end flex  ">Cadastrar Medicos</div>
-        </Button>
-      </div>
-      <div className="space-y-4">
-        <Button>
-          <BadgeQuestionMark />
-          <div className="w-44 mr-4  items-end flex  ">Ajuda e Suporte</div>
-        </Button>
-        <Button>
-          <LogIn />
-          <div className="w-44 mr-4  items-end flex  ">Sair do Sistema</div>
-        </Button>
-      </div>
+          <p className="text-xl font-semibold">Gestão de Medicamentos</p>
+        </li>
+        <li className="flex gap-4 p-3 items-center">
+          <UserCheck />
+          <p className="text-xl font-semibold">Cadastrar Medicos</p>
+        </li>
+      </ul>
+
+      <ul>
+        <li className="flex gap-4 p-3 items-center">
+          <HelpCircle />
+          <p className="text-xl font-semibold">Ajuda e Suporte</p>
+        </li>
+        <li className="flex gap-4 p-3 items-center">
+          <LogOut />
+          <p className="text-xl font-semibold">Sair do Sistema</p>
+        </li>
+      </ul>
     </div>
   );
 }
-
-export default NavBar;

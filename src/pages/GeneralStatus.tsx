@@ -1,23 +1,21 @@
-import GraficLinear from "../components/Charts/LinearChart";
+import BarChar from "../components/Charts/BarChar";
+import CircularChart from "../components/Charts/CircularChart";
+import LinearChart from "../components/Charts/LinearChart";
+import Progress from "../components/Charts/ProgressBar";
 import NavBar from "../components/NavBar";
-import BarChar from "../components/Charts/BarChart";
-import CircolBar from "../components/Charts/CircolBar";
-import ColumBar from "../components/Charts/ColumBar";
-import HorizontalProgress from "../components/Charts/teste";
 
 export default function GeneralStatus() {
   return (
-    <div className="flex ">
+    <div className="flex gap-4">
       <NavBar />
-      <div className="w-full flex flex-col items-center   justify-center scroll-auto">
-        <div className="w-full flex justify-around  p-3">
+      <div className="w-full flex flex-col gap-4">
+        <div className="flex gap-44 p-4  items-center justify-center">
           <BarChar />
-          <GraficLinear />
+          <LinearChart />
         </div>
-        <div className="w-full flex justify-around  p-3">
-          <ColumBar />
-          <CircolBar />
-          <HorizontalProgress progresso={100} />
+        <div className="flex gap-40 items-center justify-center">
+          <Progress />
+          <CircularChart />
         </div>
       </div>
     </div>

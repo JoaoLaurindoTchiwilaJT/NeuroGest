@@ -1,92 +1,63 @@
 import ApexChart from "react-apexcharts";
 
-const options = {
+const option = {
   chart: {
-    id: "grafico-linear",
     toolbar: { show: false },
   },
   xaxis: {
     categories: [
       "Jan",
-      "Fev",
+      "Feb",
       "Mar",
-      "Abr",
-      "Mai",
-      "Jun",
-      "Julh",
-      "Ago",
-      "Set",
+      "Apr",
+      "May",
+      "June",
+      "July",
+      "Aug",
+      "Sept",
       "Out",
       "Nov",
-      "Dez",
+      "Dec",
     ],
   },
-  markers: {
-    size: 5,
+  colors: ["#FFD851", "#09BB76"],
+  stroke: {
+    curve: "smooth" as const,
   },
   legend: {
     show: false,
   },
-  colors: ["#FFD851", "#22c55e"], // <- Aqui define as cores das linhas
-  stroke: {
-    curve: "smooth" as const, // ou "straight", "stepline"
-    width: 3,
+  markers: {
+    size: 4,
   },
-  tooltip: {
-    theme: "light",
-    enabled: true,
-  },
-  responsive: [
-    {
-      breakpoint: 480,
-      options: {
-        chart: {
-          width: 200,
-        },
-        legend: {
-          position: "bottom",
-        },
-      },
-    },
-  ],
 };
 
 const series = [
-  {
-    name: "Entrada",
-    data: [20, 15, 15, 5, 35, 25, 55, 65, 75, 85, 95, 99],
-  },
-  {
-    name: "Saida",
-    data: [0, 5, 10, 15, 20, 30, 40, 50, 70, 80, 90, 100],
-  },
+  { name: "Entrada", data: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 100] },
+  { name: "Saida", data: [5, 15, 25, 35, 45, 50, 40, 65, 75, 80, 90, 100] },
 ];
 
-export default function GraficLinear() {
+export default function LinearChart() {
   return (
-    <div className="h-[350] rounded-md  bg-white shadow-xl border border-0">
-      <div className="p-4">
-        <p className="text-slate-500">Total de Entradas e Saidas</p>
+    <div className="flex flex-col bg-white rounded-md shadow-2xl">
+      <div className="p-3">
+        <p className="text-xl font-semibold text-slate-400">
+          Total de Entradas e Saidas
+        </p>
       </div>
-      <div className="w-full bg-slate-200 h-0.5"></div>
-      <div className="m-4">
-        <ApexChart
-          options={options}
-          series={series}
-          type="line"
-          height={200}
-          width={500}
-        />
+      <div className="w-full h-1 bg-slate-300"></div>
+      <div className="w-md p-3">
+        <ApexChart options={option} series={series} type="line" />
       </div>
-      <div className="w-full bg-slate-200 h-0.5"></div>
-      <div className="flex  p-3 mb-2 justify-center space-x-8 mt-2">
-        <div className="flex items-center space-x-2">
-          <div className="w-4 h-4 bg-[#FFD851] rounded-full"></div>
-          <span className="text-gray-700 font-medium">Entrada</span>
+      <div className="w-full h-1 bg-slate-300"></div>
+      <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center p-3 gap-3">
+          <span className="bg-[#FFD851] h-4 w-4 rounded-4xl" />
+          Entrada
         </div>
-        <div className="flex  items-center space-x-2">
-          <div className="w-4 h-4 bg-[#22c55e] rounded-full"></div>
-          <span className="text-gray-700 font-medium">Saída</span>
+        <div className="flex items-center justify-center p-3 gap-3">
+          <span className="bg-[#09BB76] h-4 w-4 rounded-4xl" />
+          Saida
         </div>
       </div>
     </div>
